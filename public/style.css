@@ -1,0 +1,41 @@
+/* removes body scroll */
+body {
+	overflow: hidden;
+	margin: 0;
+}
+
+/* allows scroll for the container itself (where the event listener is set on */
+.container {
+	overflow: scroll hidden;
+}
+
+.container {
+	height: 100vh;
+}
+
+/* for whatever reason, the canvas itself is what sets the width. The container itself scales with the canvas (but not vice versa, even when canvas width: 100%) */
+canvas[resize] {
+	width: 500vw;
+	height: 100vh;
+}
+
+/* pointer-events allow for the mouse to interact with the canvas, even when the HTML is over top of it. */
+.text {
+	width: 500vw;
+	display: flex;
+	position: relative;
+	top: -100vh;
+	pointer-events: none;
+}
+
+.footnoteDiv {
+	position: relative;
+	flex: 0 0 auto;
+	top: 80vh;
+}
+
+.footnoteContent {
+	display: inline-block;
+	position: sticky;
+	left: 0px;
+}
