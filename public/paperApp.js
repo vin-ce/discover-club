@@ -4,11 +4,15 @@ var line;
 var vh;
 var yHeight;
 var xWidth;
+var x;
 var numOfPoints = 5;
 
 init();
 
 function init() {
+	// resets x height every init
+	x = 0;
+
 	// stores heights of line
 	vh = view.size.height;
 	yHeight = [ vh * 0.2, vh * 0.25, vh * 0.6, vh * 0.8, vh * 0.5 ];
@@ -23,6 +27,7 @@ function init() {
 
 	for (i = 0; i < numOfPoints; i++) {
 		xWidth = xWidth + i * 50;
+		console.log(xWidth);
 		line.add(new Point((x += xWidth), yHeight[i]));
 
 		classCheck = document.querySelector('.footnote-num-' + i);
