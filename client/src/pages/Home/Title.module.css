@@ -1,0 +1,17 @@
+.logoContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.logo {
+	position: relative;
+}
+
+.logoSVG {
+	fill: #d35c73;
+}
+
+.circle {
+	fill: white;
+}

@@ -1,0 +1,6 @@
+/* removes body scroll */
+body {
+	/* overflow-y: hidden; */
+	overflow: hidden;
+	margin: 0;
+}

@@ -1,0 +1,8 @@
+/* pointer-events allow for the mouse to interact with the canvas, even when the HTML is over top of it. */
+.footnotesContainer {
+	/* width: 500vw; */
+	display: flex;
+	position: relative;
+	top: -100vh;
+	pointer-events: none;
+}

@@ -1,0 +1,11 @@
+.footnoteDiv {
+	position: relative;
+	flex: 0 0 auto;
+	top: 80vh;
+}
+
+.footnoteContent {
+	display: inline-block;
+	position: sticky;
+	left: 0px;
+}
