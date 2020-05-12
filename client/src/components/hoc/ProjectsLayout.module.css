@@ -1,0 +1,6 @@
+.container {
+	position: absolute;
+	border: 1px solid black;
+	height: 45vh;
+	width: fit-content;
+}

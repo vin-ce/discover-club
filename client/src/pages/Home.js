@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import paper from 'paper';
+import { connect } from 'react-redux';
+import { projectOperations } from '../state/project/';
+
 import classes from './Home.module.css';
 
 import Footnote from './Home/Footnote';
-import Title from './Home/Title';
+import Title from './Home/ProjectTitle';
 
 const Home = (props) => {
 	const [footnotes, setFootnotes] = useState([]);
@@ -16,7 +19,6 @@ const Home = (props) => {
 
 		paper.setup('myCanvas');
 
-		console.log(canvasEl.current.width);
 		let x = 0;
 		let xWidth;
 		const NUM_OF_POINTS = 5;
@@ -27,7 +29,7 @@ const Home = (props) => {
 
 		let line = new paper.Path();
 		line.style = {
-			strokeColor: '#d35c73',
+			strokeColor: '#FFB255',
 			strokeWidth: 5,
 		};
 
@@ -76,7 +78,24 @@ const Home = (props) => {
 			// TITLES
 			// ------
 
-			titlesArr.push(<Title pos={curPoint}></Title>);
+			const { projects } = props;
+
+			titlesArr.push(
+				<Title
+					key={`title-${i}`}
+					title={projects[i].title}
+					url={projects[i].url}
+					pos={curPoint}
+				></Title>
+			);
+
+			// ------------
+			// UPDATE STATE
+			// ------------
+			props.setPosition(projects[i].title, {
+				x: Math.floor(curPoint.x),
+				y: Math.floor(curPoint.y),
+			});
 
 			// ---------
 			// FOOTNOTES
@@ -110,4 +129,19 @@ const Home = (props) => {
 	);
 };
 
-export default Home;
+const mapStateToProps = (state) => {
+	return {
+		projects: state.project.projects,
+	};
+};
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		setPosition: (projectTitle, position) =>
+			dispatch(
+				projectOperations.setProjectPosition(projectTitle, position)
+			),
+	};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

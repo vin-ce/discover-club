@@ -1,0 +1,20 @@
+.wordTitle {
+	font-size: 3rem;
+	font-weight: 700;
+	color: #d35c73;
+}
+
+.logoContainer {
+	display: flex;
+	position: absolute;
+	align-items: baseline;
+	width: fit-content;
+}
+
+.logoSVG {
+	fill: #d35c73;
+}
+
+.circle {
+	fill: white;
+}
