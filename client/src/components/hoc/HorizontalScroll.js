@@ -3,6 +3,7 @@ import classes from './HorizontalScroll.module.css';
 
 const HorizontalScroll = (props) => {
 	// there must be a wrapping horizontal scroll HOC to just set the horizontal scroll, and an inner div to set the sizings. Not sure why, but it's what works.
+	// wrapper that listens/ manipulates scrolls ---> div that sets content size/ width ---> content itself
 
 	const containerEl = useRef(null);
 
