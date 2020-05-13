@@ -1,6 +1,24 @@
 .container {
 	position: absolute;
-	border: 1px solid black;
+
+	background-color: white;
+	border: 3px solid #d35c73;
+	border-radius: 6px;
+
 	height: 45vh;
 	width: fit-content;
+
+	overflow: visible;
+	line-height: 1.7;
+
+	font-size: 21px;
+}
+
+.container p {
+	color: #d35c73;
+	margin-bottom: 2rem;
+}
+
+.container p::selection {
+	background-color: #ffb255;
 }

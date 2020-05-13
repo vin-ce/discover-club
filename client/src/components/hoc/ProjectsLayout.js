@@ -1,7 +1,9 @@
 import React from 'react';
 import classes from './ProjectsLayout.module.css';
 import { connect } from 'react-redux';
-import { Switch, Route, useHistory, useParams } from 'react-router-dom';
+import { Switch, Route, useParams } from 'react-router-dom';
+
+import Discover from '../../pages/Projects/Discover';
 import Exhibition from '../../pages/Projects/Exhibition';
 import FoodForThought from '../../pages/Projects/FoodForThought';
 
@@ -14,15 +16,20 @@ const ProjectsLayout = (props) => {
 	// const projectUrl = useHistory().location.pathname;
 
 	let projectStyle;
+	let projectPosition = {
+		x: 0,
+		y: 0,
+		// either above (above title) or below
+		relative: null,
+	};
 
 	// convoluted check to see that the positions have been set in the state.
 	if (props.projects[0].position.x) {
-		const project = props.projects.find(
-			(project) => project.url === projectUrl
-		);
+		const project = props.projects.find((project) => project.url === projectUrl);
 
 		const { position } = project;
 
+		let relative;
 		let topOffset;
 		let distFromTitle = window.innerHeight * 0.1;
 
@@ -31,10 +38,18 @@ const ProjectsLayout = (props) => {
 
 			// position below title
 			topOffset = distFromTitle;
+			relative = 'below';
 		} else {
 			// position above title
 			topOffset = -(distFromTitle + window.innerHeight * 0.4);
+			relative = 'above';
 		}
+
+		projectPosition = {
+			x: position.x,
+			y: position.y + topOffset,
+			relative,
+		};
 
 		projectStyle = {
 			left: position.x,
@@ -48,11 +63,14 @@ const ProjectsLayout = (props) => {
 
 	const routes = (
 		<Switch>
+			<Route exact path='/discover'>
+				<Discover position={projectPosition} />
+			</Route>
 			<Route exact path='/exhibition'>
-				<Exhibition />
+				<Exhibition position={projectPosition} />
 			</Route>
 			<Route exact path='/food-for-thought'>
-				<FoodForThought />
+				<FoodForThought position={projectPosition} />
 			</Route>
 		</Switch>
 	);
