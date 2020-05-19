@@ -1,15 +1,14 @@
-import { createStore, combineReducers, compose } from 'redux';
+import { createStore, combineReducers } from 'redux';
+import { composeWithDevTools } from 'remote-redux-devtools';
 
 import { default as project } from './project';
 
 const rootReducer = combineReducers({
-	project,
+    project,
 });
 
-const composeEnhancers =
-	process.env.NODE_ENV === 'development'
-		? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-		: null || compose;
+// http://remotedev.io/local/
+const composeEnhancers = composeWithDevTools({ realtime: true, hostname: 'localhost', port: 8000 });
 
 const store = createStore(rootReducer, composeEnhancers());
 

@@ -1,20 +1,25 @@
 .wordTitle {
-	font-size: 3rem;
-	font-weight: 700;
-	color: #d35c73;
+    font-size: 10vh;
+    font-weight: 700;
+    color: #d35c73;
 }
 
 .logoContainer {
-	display: flex;
-	position: absolute;
-	align-items: baseline;
-	width: fit-content;
+    display: flex;
+    position: absolute;
+    align-items: baseline;
+    width: fit-content;
+    background: black;
+}
+
+.logoSVGContainer {
+    position: absolute;
 }
 
 .logoSVG {
-	fill: #d35c73;
+    fill: #d35c73;
 }
 
 .circle {
-	fill: white;
+    fill: white;
 }

@@ -1,0 +1,14 @@
+.container {
+    position: absolute;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 1rem;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.nav {
+    color: #d35c73;
+    margin-right: 2rem;
+}
