@@ -3,7 +3,7 @@ body {
 	/* overflow-y: hidden; */
 	overflow: hidden;
 	margin: 0;
-	font-family: din-2014;
+	font-family: Roboto black;
 }
 
 /* #d35c73 */
@@ -80,7 +80,7 @@ body {
    * Scrollbar thumb styles
    */
 .ps__thumb-x {
-	background-color: #d35c73;
+	background-color: #000000;
 	/* border-radius: 6px; */
 	/* transition: background-color .2s linear, height .2s ease-in-out; */
 	/* -webkit-transition: background-color .2s linear, height .2s ease-in-out; */
@@ -92,7 +92,7 @@ body {
 }
 
 .ps__thumb-y {
-	background-color: #d35c73;
+	background-color: #000000;
 	/* border-radius: 6px; */
 	/* transition: background-color .2s linear, width .2s ease-in-out; */
 	/* -webkit-transition: background-color .2s linear, width .2s ease-in-out; */
@@ -106,7 +106,7 @@ body {
 .ps__rail-x:hover > .ps__thumb-x,
 .ps__rail-x:focus > .ps__thumb-x,
 .ps__rail-x.ps--clicking .ps__thumb-x {
-	background-color: #d35c73;
+	background-color: #000000;
 	/* height: 11px; */
 	height: 6px;
 }

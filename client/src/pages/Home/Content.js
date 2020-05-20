@@ -28,6 +28,18 @@ const Content = (props) => {
             content = <iframe style={frameStyle} src={props.src} />;
             break;
         }
+        
+        case 'instagrampost': {
+            content = <iframe style={frameStyle} src={props.src} frameborder="0"/>;
+            break;
+            
+        }
+        case 'youtube': {
+            content = <iframe style={frameStyle} src={props.src} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>;
+            break;
+            
+        }
+        
 
         default:
             console.log('something went wrong in content');

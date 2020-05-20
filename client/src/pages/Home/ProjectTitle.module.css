@@ -1,15 +1,17 @@
 .wordTitle {
     font-size: 10vh;
     font-weight: 700;
-    color: #d35c73;
+    color: rgb(0, 0, 0);
+    padding: 1px;
 }
 
 .logoContainer {
     display: flex;
+    float: left;
     position: absolute;
     align-items: baseline;
     width: fit-content;
-    background: black;
+    
 }
 
 .logoSVGContainer {
@@ -17,7 +19,7 @@
 }
 
 .logoSVG {
-    fill: #d35c73;
+    fill: black;
 }
 
 .circle {

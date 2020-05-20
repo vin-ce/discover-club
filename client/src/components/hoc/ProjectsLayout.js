@@ -3,9 +3,7 @@ import classes from './ProjectsLayout.module.css';
 import { connect } from 'react-redux';
 import { Switch, Route, useParams } from 'react-router-dom';
 
-import Discover from '../../pages/Projects/Discover';
-import Exhibition from '../../pages/Projects/Exhibition';
-import FoodForThought from '../../pages/Projects/FoodForThought';
+
 
 const ProjectsLayout = (props) => {
 	// -----------
@@ -61,24 +59,10 @@ const ProjectsLayout = (props) => {
 	// ROUTES
 	// ------
 
-	const routes = (
-		<Switch>
-			<Route exact path='/discover'>
-				<Discover position={projectPosition} />
-			</Route>
-			<Route exact path='/exhibition'>
-				<Exhibition position={projectPosition} />
-			</Route>
-			<Route exact path='/food-for-thought'>
-				<FoodForThought position={projectPosition} />
-			</Route>
-		</Switch>
-	);
+
 
 	return (
-		<div style={projectStyle} className={classes.container}>
-			{routes}
-		</div>
+		
 	);
 };
 

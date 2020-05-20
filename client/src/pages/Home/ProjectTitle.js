@@ -25,6 +25,7 @@ const Title = (props) => {
 
     return (
         <div ref={containerEl} onClick={clickHandler} className={classes.logoContainer} style={titleStyle}>
+            <p><div className={classes.wordTitle}>{props.name}</div></p>
             <svg
                 //
                 xmlns='http://www.w3.org/2000/svg'
@@ -44,12 +45,13 @@ const Title = (props) => {
                     //
                     xmlns='http://www.w3.org/2000/svg'
                     className={classes.logoSVG}
-                    d='M44.24,42.83,64.08,61.3l10.75-2.75L51.75,37.05l25.9-6.62-4.79-8.95-23.45,6L56,7.83l2-5.92L48.19,0,46.52,4.9l-7,20.73L20.61,8.05l-5.07,8L32.42,31.81,0,40.1l8.47,8,25.62-6.55h0l-8.48,25,8.89,5.14Z'
+                    d='M58.68,48.83,43.6,42.54,44.22,64,28.93,61.38,28.5,45.63,16.37,54,0,47,20.48,32.88,8.17,27.74l3.08-14.6L27.8,20.05,27.32,2.46,42.36,0l.51,17.42,11.5-7.94L66,19.76,51.31,29.87,73,38.94Z'
                     // transform={`translate(${LOGO_SIZE.width / 4}, ${LOGO_SIZE.height / 4}) scale(${SCALE})`}
                     transform={`scale(${SCALE})`}
                 />
             </svg>
-            <div className={classes.wordTitle}>{props.name}</div>
+            
+            
         </div>
     );
 };

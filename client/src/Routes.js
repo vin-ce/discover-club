@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
-import ProjectsLayout from './components/hoc/ProjectsLayout';
+
 
 const Routes = (props) => {
 	return (
@@ -11,7 +11,7 @@ const Routes = (props) => {
 			</Route>
 			<Switch>
 				<Route path='/:project'>
-					<ProjectsLayout />
+					
 				</Route>
 			</Switch>
 		</React.Fragment>

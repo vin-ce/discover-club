@@ -10,7 +10,7 @@ const Nav = ({ projects, curSection }) => {
         if (project.name === curSection) {
             console.log(project.name, curSection);
             contentStyle = {
-                backgroundColor: 'yellow',
+                color: 'rgb(249,100,121)',
             };
         }
 
@@ -23,6 +23,7 @@ const Nav = ({ projects, curSection }) => {
 
     return (
         <div className={classes.container}>
+            
             {/*  */}
             {navArr}
         </div>
