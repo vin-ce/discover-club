@@ -13,6 +13,13 @@ const initialState = {
             // the srcs
             content: [
                 {
+                    name: 'description',
+                    src: 'https://drive.google.com/embeddedfolderview?id=1eSwP3ZQkR0I8-r39eopxl9LzTMTbnOd7#grid',
+                    type: 'document',
+                    pos: { x: 90, y: 280 },
+                    dimensions: { width: 230, height: 220 },
+                },
+                {
                     name: 'instagrampost',
                     src: 'https://www.instagram.com/p/Bv-lTnxFhAB/embed',
                     type: 'document',
@@ -28,21 +35,16 @@ const initialState = {
                 },
 
                 
+                
+                
                 {
                     name: 'description',
-                    src: 'https://drive.google.com/embeddedfolderview?id=1eSwP3ZQkR0I8-r39eopxl9LzTMTbnOd7#grid',
+                    src: 'https://docs.google.com/forms/d/e/1FAIpQLSeVEZaDCHXP0h281vmkLrBNKhyr6xI7WbQ7phiDmyOKcFMbJg/viewform?embedded=true',
                     type: 'document',
-                    pos: { x: 50, y: 500 },
-                    dimensions: { width: 230, height: 220 },
+                    pos: { x: 60, y: 530 },
+                    dimensions: { width: 400, height: 350 },
                 },
-
-                {
-                    name: 'youtube',
-                    src: 'https://www.youtube.com/embed/zl3V1POVba0',
-                    type: 'youtube',
-                    pos: { x: 1100, y: 500 },
-                    dimensions: { width: 560, height: 315 },
-                },
+               
                 {
                     name: 'description',
                     src: 'https://docs.google.com/document/d/e/2PACX-1vS3pHs4xTTEiIRvJb88YOXBpdkwXbuJOlj1ysYr_Y6rH3NCpIhwzOhBtB-yKxNyF-vB7DtQ7m0fC9Cv/pub?embedded=true',
@@ -68,6 +70,13 @@ const initialState = {
                     type: 'slideshow',
                     pos: { x: 2500, y: 100 },
                     dimensions: { width: 500, height: 500 },
+                },
+                {
+                    name: 'youtube',
+                    src: 'https://www.youtube.com/embed/zl3V1POVba0',
+                    type: 'youtube',
+                    pos: { x: 1100, y: 500 },
+                    dimensions: { width: 560, height: 315 },
                 },
                 {
                     name: 'calendar',
